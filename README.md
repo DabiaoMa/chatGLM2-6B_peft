@@ -15,38 +15,38 @@ chatGLM2-6B的lora, adalora, adaptionPrompt的训练代码和服务部署代码
 
     C.1 lora微调
    
-    0. 将chatGLM2-6B的模型文件 (即 pytorch\_model-0000\*.bin) 拷贝到model文件夹。 
-    1. 'cd lora/tuning'
-    2. 将训练数据转化成类似 `data/train.json` 的格式
-    3. 运行tokenize\_dataset\_rows.py: `python tokenize_dataset_rows.py`
-    4. 运行run.sh: `sh run.sh`
+    0. 将chatGLM2-6B的模型文件 (即 pytorch_model-0000*.bin) 拷贝到model文件夹。 
+    1. cd lora/tuning
+    2. 将训练数据转化成类似 data/train.json 的格式
+    3. 运行tokenize_dataset_rows.py: python tokenize_dataset_rows.py
+    4. 运行run.sh: sh run.sh
     5. 训练完毕
-    6. `cd lora`
+    6. cd lora
     7. 修改api.py里面lora checkpoint路径
-    8. 部署服务: `python api.py`
+    8. 部署服务: python api.py
     -------------------------------------
 
     C.2 adalora微调
     
-    0. 将chatGLM2-6B的模型文件 (即 pytorch\_model-0000\*) 拷贝到model文件夹。
-    1. `cd adalora/tuning`
-    2. 将训练数据转化成类似 `data/train.json` 的格式
-    3. 运行tokenize\_dataset\_rows.py: `python tokenize_dataset_rows.py`
-    4. 运行run.sh: `sh run.sh`
+    0. 将chatGLM2-6B的模型文件 (即 pytorch_model-0000*) 拷贝到model文件夹。
+    1. cd adalora/tuning
+    2. 将训练数据转化成类似 data/train.json 的格式
+    3. 运行tokenize_dataset_rows.py: python tokenize_dataset_rows.py
+    4. 运行run.sh: sh run.sh
     5. 训练完毕
-    6. `cd adalora`
+    6. cd adalora
     7. 修改api.py里面adalora checkpoint路径
-    8. 部署服务: `python api.py`
+    8. 部署服务: python api.py
     ------------------------------------
 
     C.3 adaptionPrompt微调
        
-    0. 将chatGLM2-6B的模型文件 (即 pytorch\_model-0000\*) 拷贝到 adaptionPrompt/tuning/model 文件夹。不要拷贝除pytorch\_model-0000\*外的文件。 
-    1. `cd adaptionPrompt/tuning`
+    0. 将chatGLM2-6B的模型文件 (即 pytorch_model-0000*) 拷贝到 adaptionPrompt/tuning/model 文件夹。不要拷贝除pytorch_model-0000*外的文件。 
+    1. cd adaptionPrompt/tuning
     2. 将训练数据转化成类似data/train.json的格式
-    3. 运行tokenize\_dataset\_rows.py: `python tokenize_dataset_rows.py`
-    4. 运行run.sh: `sh run.sh`
+    3. 运行tokenize_dataset_rows.py: python tokenize_dataset_rows.py
+    4. 运行run.sh: sh run.sh
     5. 训练完毕
-    6. `cd adaptionPrompt`
+    6. cd adaptionPrompt
     7. 修改api.py里面adaptionPrompt checkpoint路径
-    8. 部署服务: `python api.py`
+    8. 部署服务: python api.py
